@@ -148,3 +148,90 @@ fotter a {
 footer a:hover {
     text-decoration: underline;
 }
+.btn-orcamento {
+  display: inline-block;
+  background: #25d366;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.btn-orcamento:hover {
+  background: #1ebe5b;
+  transform: scale(1.05);
+}
+
+.lista-servicos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.servico {
+  background:var(--amarelo);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.servico summary {
+  cursor: pointer;
+  padding: 16px 20px;
+  font-weight: bold;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.servico summary::-webkit-details-marker {
+  display: none;
+}
+
+.servico summary::after {
+  content: "+";
+  font-size: 1.4rem;
+}
+
+.servico[open] summary::after {
+  content: "−";
+}
+
+.servico p {
+  padding: 0 20px 16px;
+  margin: 0;
+}
+.servico {
+  interpolate-size: allow-keywords;
+}
+
+.servico::details-content {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease, content-visibility 0.3s allow-discrete;
+}
+
+.servico[open]::details-content {
+  height: auto;
+}
+
+.servico {
+  background: #ffc107;
+  border: 2px solid #ffc107;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.servico summary {
+  background: #ffc107;
+}
+
+.servico p {
+  background: #fff;
+  padding: 16px 20px;
+  margin: 0;
+}
